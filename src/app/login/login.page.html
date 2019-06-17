@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="vermelho">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <h3 class="centro">Login</h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="vermelho">
+  <div class="alinhamento">
+    <img src="../../assets/centrops.png" class="tamanho">
+  </div>
+
+  <ion-item color="vermelho" class="centro borda">
+    <ion-label position="floating" class="centro" *ngIf="usuario == admin; else blocoElse">@Etec:</ion-label>
+    <ion-input></ion-input>
+    <ion-label position="floating" class="centro">Senha:</ion-label>
+    <ion-input></ion-input>
+    <ion-button fill="solid" color="branco" size="default" routerLink="/tabs/tab1">Entrar</ion-button>
+  </ion-item>
+
+  <ng-template #blocoElse>
+    <p><strong style="color:#ff0000">Você é menor de idade!</strong></p>
+  </ng-template>
+
+</ion-content>

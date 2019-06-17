@@ -1,0 +1,22 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar color="vermelho">
+
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item routerLink="/tabs/tab1">Notícias</ion-item>
+          <ion-item routerLink="/duvidasFrequentes">Dúvidas Frequentes</ion-item>
+          <ion-item routerLink="/calendarioEscolar">Calendário Escolar</ion-item>
+          <ion-item routerLink="/faleConosco">Fale Conosco</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- the main content -->
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

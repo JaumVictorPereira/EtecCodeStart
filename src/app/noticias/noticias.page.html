@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="vermelho">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+      <ion-title class="titulo">
+        Noticias
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card *ngFor="let noticia of listaNoticias">
+      <img [src]="noticia.img" />
+      <ion-card-content>
+        <ion-card-title color="cinza" class="titulo-card">
+          {{noticia.titulo}}
+        </ion-card-title>
+        <p class="date">
+          <ion-icon name="time"></ion-icon> {{noticia.data}}
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam hendrerit tellus et purus euismod pretium.
+          Phasellus sit amet porta tellus.
+        </p>
+        <ion-button color="vermelho" slot="end" size="small" (click)="mostraNoticia(noticia)">Ver Mais</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+  
+  </ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="vermelho">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title class="titulo">
+        Noticias
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+  
+      <ion-card-content>
+        <ion-card-title color="cinza" class="titulo-card espacamento">
+          {{noticia.titulo}}
+        </ion-card-title>
+        <img [src]="noticia.img" />
+        <p class="date espacamento">
+          <ion-icon name="time"></ion-icon>{{noticia.data}}
+        </p>
+  
+        <p>
+          {{noticia.noticia}}
+        </p>
+  
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
